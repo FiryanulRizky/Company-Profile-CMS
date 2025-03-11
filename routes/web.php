@@ -44,7 +44,8 @@ Route::get('berita/kategori/{par1}', 'App\Http\Controllers\Berita@kategori');
 // Akreditasi
 Route::get('provider-akreditasi', 'App\Http\Controllers\Akreditasi@index');
 Route::get('akreditasi/read/{par1}', 'App\Http\Controllers\Akreditasi@read');
-Route::get('layanan/{par1}', 'App\Http\Controllers\Akreditasi@layanan');
+// Route::get('layanan/{par1}', 'App\Http\Controllers\Akreditasi@layanan');
+Route::get('layanan/{par1}', 'App\Http\Controllers\Berita@layanan');
 Route::get('akreditasi/kategori/{par1}', 'App\Http\Controllers\Akreditasi@kategori');
 // download
 Route::get('download', 'App\Http\Controllers\Download@index');
