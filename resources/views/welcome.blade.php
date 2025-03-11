@@ -1,474 +1,132 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Trans Continent</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicons -->
-    <link href="{{ asset('frontend_assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('frontend_assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+        <title>Laravel</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS File -->
-    <link href="{{ asset('frontend_assets/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Styles -->
+        <style>
+            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
+        </style>
 
-    <!-- Libraries CSS Files -->
-    <link href="{{ asset('frontend_assets/lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend_assets/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend_assets/lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend_assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend_assets/lib/magnific-popup/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend_assets/lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Nunito';
+            }
+        </style>
+    </head>
+    <body class="antialiased">
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
-    <!-- Main Stylesheet File -->
-    <link href="{{ asset('frontend_assets/css/style.css') }}" rel="stylesheet">
-    
-    <style>
-    .image-center{
-        display: block;
-        margin-left: 6.5px;
-        margin-right: 6.5px;
-        width: 100%;
-      }
-    </style>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endif
+                </div>
+            @endif
 
-    <!-- Main Javascript File -->
-    <script src="{{ asset('frontend_assets/js/main.js') }}"></script>
-
-    <!-- =======================================================
-      Theme Name: Reveal
-      Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-      Author: BootstrapMade.com
-      License: https://bootstrapmade.com/license/
-    ======================================================= -->
-</head>
-
-<body id="body">
-
-<!--==========================
-  Header
-============================-->
-@php
-        $url = request()->segment(1);
-  @endphp
-<header id="header">
-    <div class="container">
-
-        <div id="logo" class="pull-left">
-            <a href="{{ url('/') }}" class="scrollto">
-                <img src="{{ asset('tclogo.png') }}" alt="logo" width="250px" height="50px">
-            </a>
-        </div>
-
-        <nav id="nav-menu-container">
-            <ul class="nav-menu">
-                <li class="menu-active"><a href="#body">Home</a></li>
-                <li><a href="#about">About Us</a>
-                    <ul>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li class="drop-down"><a href="#">Deep Drop Down</a>
-                        <ul>
-                            <li><a href="#">Deep Drop Down 1</a></li>
-                            <li><a href="#">Deep Drop Down 2</a></li>
-                            <li><a href="#">Deep Drop Down 3</a></li>
-                            <li><a href="#">Deep Drop Down 4</a></li>
-                            <li><a href="#">Deep Drop Down 5</a></li>
-                        </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="{{$url=='blog'?'menu-active':''}}"><a href="{{url('blog')}}">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav><!-- #nav-menu-container -->
-    </div>
-</header><!-- #header -->
-
-<!--==========================
-  Intro Section
-============================-->
-<section id="intro">
-
-    <div class="intro-content">
-      <h2>Smart <span style="color:red">Focus </span>Committed</h2>
-      <div>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="#portfolio" class="btn-projects scrollto" >Our Projects</a>
-      </div>
-    </div>
-    <div id="intro-carousel" class="owl-carousel" >
-    @foreach ($sliders as $slider)
-        <div class="item" style="background-image: url({{ asset('uploads/slider_photos') }}/{{ $slider->slider_photo }});"></div>
-    @endforeach
-    </div>
-
-  </section><!-- #intro -->
-<div class="in-to-about"></div>
-<main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about" class="wow fadeInUp">
-        <div class="container">
-            @foreach ($abouts as $about)
-            <div class="row">
-                <div class="col-lg-6 about-img">
-                    <img src="{{ asset('uploads/about_photos') }}/{{ $about->about_photo }}" alt="">
+            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
+                        <g clip-path="url(#clip0)" fill="#EF3B2D">
+                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
+                        </g>
+                    </svg>
                 </div>
 
-                    <div class="col-lg-6 content">
-                        <h2>{{ $about->heading }}</h2>
-                        <h3>{{ $about->sub_title }}</h3>
-                        <ul>{{ $about->description }}</ul>
-                    </div>
-            </div>
-            @endforeach
-
-        </div>
-    </section><!-- #about -->
-
-    <!--==========================
-      Experiences Section
-    ============================-->
-    <section id="experiences">
-    <div class="container">
-        <div class="row">
-            <br/>
-            <div class="section-header">
-            <h2>Experiences</h2>
-            </div>
-           
-        </div>
-            <div class="row text-center">
-                <div class="col">
-                <div class="counter">
-          {{-- <i class="fa fa-code fa-2x"></i> --}}
-          <h2 class="timer count-title count-number" data-to="21" data-speed="1500"></h2>
-           <p class="count-text ">Years</p>
-        </div>
-                </div>
-                  <div class="col">
-                   <div class="counter">
-          {{-- <i class="fa fa-coffee fa-2x"></i> --}}
-          <h2 class="timer count-title count-number" data-to="18" data-speed="1500"></h2>
-          <p class="count-text ">Offices</p>
-        </div>
-                  </div>
-                  <div class="col">
-                      <div class="counter">
-          {{-- <i class="fa fa-lightbulb-o fa-2x"></i> --}}
-          <h2 class="timer count-title count-number" data-to="2" data-speed="1500"></h2>
-          <p class="count-text ">Overseas</p>
-        </div></div>
-                  <div class="col">
-                  <div class="counter">
-          {{-- <i class="fa fa-bug fa-2x"></i> --}}
-          <h2 class="timer count-title count-number" data-to="261" data-speed="1500"></h2>
-          <p class="count-text ">Customers</p>
-        </div>
-                  </div>
-             </div>
-    </div></section><!-- #choose us -->
-
-    <!--==========================
-      Services Section
-    ============================-->
-    <section id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Services</h2>
-            </div>
-
-            <div class="row">
-                @foreach ($services as $service)
-                <div class="col-lg-6">
-                    <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="icon"><img src="{{ asset('uploads/service_photos') }}/{{ $service->services_photo }}" alt=""></div>
-                        <h4 class="title"><a href="">{{ $service->title }}</a></h4>
-                        <p class="description">{{ $service->short_description }}</p>
-                    </div>
-                </div>
-                @endforeach
-
-            </div>
-
-        </div>
-    </section><!-- #services -->
-
-    <!--==========================
-      Clients Section
-    ============================-->
-    <section id="clients" class="wow fadeInUp">
-        <div class="container">
-            <div class="section-header">
-                <h2>Clients</h2>
-                <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-            </div>
-
-            <div class="owl-carousel clients-carousel">
-                @foreach ($clients as $client)
-                <div class="border-img">
-                    <img src="{{ asset('uploads/client_photos') }}/{{ $client->clients_photo }}" alt="">
-                </div>
-                @endforeach
-            </div>
-
-        </div>
-    </section><!-- #clients -->
-
-    <!--==========================
-      Our Portfolio Section
-    ============================-->
-    <section id="portfolio" class="wow fadeInUp">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Portfolio</h2>
-                <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row no-gutters">
-                @foreach ($portfolios as $portfolio)
-                <div class="col-lg-3 col-md-4">
-                    <div class="portfolio-item wow fadeInUp">
-                        <a href="{{ asset('uploads/portfolio_photos') }}/{{ $portfolio->portfolio_photo }}" class="portfolio-popup">
-                            <img src="{{ asset('uploads/portfolio_photos') }}/{{ $portfolio->portfolio_photo }}" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info"><h2 class="wow fadeInUp">{{ $portfolio->title }}</h2></div>
+                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                @endforeach
 
-            </div>
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
+                                </div>
+                            </div>
+                        </div>
 
-        </div>
-    </section><!-- #portfolio -->
+                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                            <div class="flex items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
+                            </div>
 
-    <!--==========================
-      Testimonials Section
-    ============================-->
-    <section id="testimonials" class="wow fadeInUp">
-        <div class="container">
-            <div class="section-header">
-                <h2>Testimonials</h2>
-            </div>
-            <div class="owl-carousel testimonials-carousel">
-                @foreach ($testimonials as $testimonial)
-                <div class="testimonial-item">
-                    <p>
-                        <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                        {{ $testimonial->comment }}
-                        <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-                    </p>
-                    <img src="{{ asset('uploads/testimonial_photos') }}/{{ $testimonial->testimonial_photo }}" class="testimonial-img" alt="">
-                    <h3>{{ $testimonial->name }}</h3>
-                    <h4>{{ $testimonial->designation }}</h4>
-                </div>
-                @endforeach
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                                </div>
+                            </div>
+                        </div>
 
-            </div>
+                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
+                            </div>
 
-        </div>
-    </section><!-- #testimonials -->
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
+                                </div>
+                            </div>
+                        </div>
 
-    <!--==========================
-      Our Team Section
-    ============================-->
-    <section id="team" class="wow fadeInUp">
-        <div class="container">
-            <div class="section-header">
-                <h2>Top Management</h2>
-            </div>
-            <div class="row">
-                @foreach ($teams as $team)
-                <div class="col-lg-3 col-md-6">
-                    <div class="member">
-                        <div class="pic"><img src="{{ asset('uploads/team_photos') }}/{{ $team->tm_photo }}" alt=""></div>
-                        <div class="details">
-                            <h4>{{ $team->name }}</h4>
-                            <span>{{ $team->designation }}</span>
-                            {{-- <div class="social">
-                                <a href="{{ $team->twitter }}"><i class="fa fa-twitter"></i></a>
-                                <a href="{{ $team->fb }}"><i class="fa fa-facebook"></i></a>
-                                <a href="{{ $team->google }}"><i class="fa fa-google-plus"></i></a>
-                                <a href="{{ $team->linkedin }}"><i class="fa fa-linkedin"></i></a>
-                            </div> --}}
+                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                            <div class="flex items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
+                            </div>
+
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
 
-            </div>
+                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                    <div class="text-center text-sm text-gray-500 sm:text-left">
+                        <div class="flex items-center">
+                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
+                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
 
-        </div>
-    </section><!-- #team -->
+                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
+                                Shop
+                            </a>
 
-    <!--========================== category Section ============================-->
-    <section id="category" class="wow fadeInUp">
-        <div class="container">
-          <div class="section-header">
-            <h2>INFO & NEWS</h2>
-          </div>
-          <div class="row">
-  
-          <div class="row" id="category-wrapper">
-            @foreach ($categories as $category)
-                <div class="col-md-4 col-sm-12 category-item filter-app" >
-                    <a href="{{route('blog', ['c' =>$category->name])}}">
-                        <img src="{{asset('category_image/'.$category->image)}}" class="image-center">
-                        <div class="details">
-                          <h4>{{$category->name}}</h4>
-                          <span>{{$category->description}}</span>
-                        </div>
-                    </a>
-                </div>
-            @endforeach  
-          </div>
-  
-        </div>
-      </section>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
+                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
 
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact" class="wow fadeInUp">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-            </div>
-            @foreach ($contacts as $contact)
-            <div class="row contact-info">
-                <div class="col-md-4">
-                    <div class="contact-address">
-                        <i class="ion-ios-location-outline"></i>
-                        <h3>Address</h3>
-                        <address>{{ $contact->address }}</address>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="contact-phone">
-                        <i class="ion-ios-telephone-outline"></i>
-                        <h3>Phone Number</h3>
-                        <p><a href={{ $contact->phone_no }}>{{ $contact->phone_no }}</a></p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="contact-email">
-                        <i class="ion-ios-email-outline"></i>
-                        <h3>Email</h3>
-                        <p><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
-                    </div>
-                </div>
-
-            </div>
-            @endforeach
-        </div>
-
-        <div class="container mb-4">
-            <iframe src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=PT.%20Trans%20Continent%20Jakarta+(PT%20trans%20Continent)&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-
-        <div class="container">
-            <div class="form">
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-                <form action="{{ url('contact/submit') }}" method="post" role="form" class="contactForm">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validation"></div>
+                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
+                                Sponsor
+                            </a>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                        <div class="validation"></div>
+
+                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                        Build v{{ Illuminate\Foundation\Application::VERSION }}
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                        <div class="validation"></div>
-                    </div>
-                    <div class="text-center"><button type="submit" style="background: #0033A0">Send Message</button></div>
-                </form>
+                </div>
             </div>
-
         </div>
-    </section><!-- #contact -->
-
-</main>
-
-<!--==========================
-  Top Bar
-============================-->
-<section id="topbar" class="d-none d-lg-block">
-    @foreach ($contacts as $contact)
-    <div class="container clearfix">
-        <div class="contact-info float-left">
-            <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">{{ $contact->email }}</a>
-            <i class="fa fa-phone"></i> {{ $contact->phone_no }}
-        </div>
-        <div class="social-links float-right">
-            <a href="{{ $contact->twitter }}" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="{{ $contact->fb }}" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="{{ $contact->google }}" class="google-plus"><i class="fa fa-google-plus"></i></a>
-            <a href="{{ $contact->linkedin }}" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        </div>
-    </div>
-    @endforeach
-</section>
-
-<!--==========================
-  Footer
-============================-->
-<footer id="footer">
-    <div class="container">
-        <div class="copyright">
-            &copy; Copyright {{ date('Y') }}<strong> PT. Trans Continent</strong>
-        </div>
-    </div>
-</footer><!-- #footer -->
-
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-<!-- JavaScript Libraries -->
-<script src="{{ asset('frontend_assets/lib/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/jquery/jquery-migrate.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/easing/easing.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/superfish/hoverIntent.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/superfish/superfish.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/wow/wow.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/magnific-popup/magnific-popup.min.js') }}"></script>
-<script src="{{ asset('frontend_assets/lib/sticky/sticky.js') }}"></script>
-
-<!-- Contact Form JavaScript File -->
-<script src="{{ asset('frontend_assets/contactform/contactform.js') }}"></script>
-
-<!-- Template Main Javascript File -->
-<script src="{{ asset('frontend_assets/js/main.js') }}"></script>
-
-</body>
+    </body>
 </html>
