@@ -37,7 +37,7 @@ class Home extends Controller
     }
 
     // Homepage
-    public function jemari_edu()
+    public function info()
     {
         $site_config   = DB::table('konfigurasi')->first();
         $news   = new Berita_model();

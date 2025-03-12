@@ -17,7 +17,7 @@ $nav_materi  = $myprofil->nav_materi();
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
    <ul class="navbar-nav mr-auto">
       <li class="nav-item"><a class="nav-link" href="{{ asset('/') }}">Beranda</a> </li>
-      <li class="nav-item"><a class="nav-link" href="{{ asset('jemari_edu') }}">About Us</a> </li>
+      <li class="nav-item"><a class="nav-link" href="{{ asset('info') }}">About Us</a> </li>
       <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Berita &amp; Updates <span class="pull-right"><i class="fas fa-caret-down"></i></span></a>
          <ul class="dropdown-menu" >
