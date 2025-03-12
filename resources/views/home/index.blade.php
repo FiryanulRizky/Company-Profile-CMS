@@ -19,7 +19,7 @@
          <!--Service Area Start-->
          <section class="donation-join wf100">
             <div class="container text-center">
-               <div class="row">
+               <div class="row d-flex flex-row flex-nowrap overflow-auto">
                   
                   <?php foreach($layanan as $layanan) { ?>
                      <div class="col-md-4 col-sm-12">
@@ -96,7 +96,7 @@
                <hr>
             </div>
          </div>
-         <div class="row" style="background-color: white; padding-top: 20px; padding-bottom: 20px; border-radius: 5px;">
+         <div class="d-flex flex-row flex-nowrap overflow-auto" style="background-color: white; padding-top: 20px; padding-bottom: 20px; border-radius: 5px;">
             <?php foreach($berita as $berita) { ?>
             <!--Blog Small Post Start-->
             <div class="col-md-4 col-sm-6" >
