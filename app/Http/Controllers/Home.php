@@ -16,7 +16,7 @@ class Home extends Controller
     public function index()
     {
     	$site_config   = DB::table('konfigurasi')->first();
-        $video          = DB::table('video')->orderBy('id_video','DESC')->first();
+        $videos          = DB::table('video')->orderBy('id_video','DESC')->get();
     	$slider         = DB::table('galeri')->where('jenis_galeri','Homepage')->limit(5)->orderBy('id_galeri', 'DESC')->get();
         $layanan        = DB::table('berita')->where(array('jenis_berita'=>'Layanan','status_berita'=>'Publish'))->orderBy('urutan', 'ASC')->get();
         $news           = new Berita_model();
@@ -30,7 +30,7 @@ class Home extends Controller
                         'berita'        => $berita,
                         'beritas'       => $berita,
                         'layanan'       => $layanan,
-                        'video'         => $video,
+                        'videos'         => $videos,
                         'content'       => 'home/index'
                     );
         return view('layout/wrapper',$data);

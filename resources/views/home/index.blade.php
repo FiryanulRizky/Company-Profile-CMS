@@ -62,7 +62,8 @@
             <!--About Section Start-->
          <section class="home2-about wf100 p100 gallery" style="background: url({{ asset('assets/aws/images/news-artilcesbg.jpg') }}) no-repeat; background-size: cover;">
             <div class="container">
-               <div class="row">
+               <div class="row d-flex flex-row flex-nowrap overflow-auto">
+                  <?php foreach($videos as $video) { ?>
                   <div class="col-md-5">
                         <div class="video-img"> <a href="https://youtu.be/{{ $video->video }}" data-rel="prettyPhoto" title="{{ $video->judul }}"><i class="fas fa-play"></i></a> <img src="{{ asset('assets/upload/image/'.$video->gambar) }}" alt=""> </div>
                   </div>
@@ -74,6 +75,7 @@
                         <a class="aboutus" href="#">Lihat Detail</a> 
                      </div>
                   </div>
+                  <?php } ?>
                </div>
             </div>
             
