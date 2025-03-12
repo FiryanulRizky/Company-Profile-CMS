@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for compro
-CREATE DATABASE IF NOT EXISTS `compro` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `compro`;
+-- Dumping database structure for jemari_edu
+CREATE DATABASE IF NOT EXISTS `jemari_edu` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `jemari_edu`;
 
--- Dumping structure for table compro.agenda
+-- Dumping structure for table jemari_edu.agenda
 CREATE TABLE IF NOT EXISTS `agenda` (
   `id_agenda` int NOT NULL AUTO_INCREMENT,
   `id_user` int NOT NULL,
@@ -47,11 +47,11 @@ CREATE TABLE IF NOT EXISTS `agenda` (
   PRIMARY KEY (`id_agenda`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.agenda: ~1 rows (approximately)
+-- Dumping data for table jemari_edu.agenda: ~1 rows (approximately)
 INSERT INTO `agenda` (`id_agenda`, `id_user`, `id_kategori_agenda`, `bahasa`, `slug_agenda`, `judul_agenda`, `isi`, `status_agenda`, `jenis_agenda`, `keywords`, `gambar`, `icon`, `hits`, `urutan`, `tanggal_mulai`, `tanggal_selesai`, `jam_mulai`, `jam_selesai`, `tempat`, `google_map`, `tanggal_post`, `tanggal_publish`, `tanggal`) VALUES
 	(1, 4, 6, 'ID', 'latihan-agenda', 'Latihan Agenda', '<p>Latihan</p>', 'Publish', 'Agenda', 'adad', NULL, 'daad', 0, NULL, '2020-09-12', '2020-09-12', '08:00:00', '17:00:00', 'AWS Indonesia', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7930.3386078467065!2d106.82893243028725!3d-6.372131203377098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed5d166b756d%3A0x41d8cdc14c819774!2sDepok%20Town%20Square!5e0!3m2!1sen!2sid!4v1579565022446!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', '2020-09-12 23:46:53', '2020-09-12 23:42:16', '2020-09-13 00:09:38');
 
--- Dumping structure for table compro.berita
+-- Dumping structure for table jemari_edu.berita
 CREATE TABLE IF NOT EXISTS `berita` (
   `id_berita` int NOT NULL AUTO_INCREMENT,
   `id_user` int NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `berita` (
   PRIMARY KEY (`id_berita`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.berita: ~11 rows (approximately)
+-- Dumping data for table jemari_edu.berita: ~11 rows (approximately)
 INSERT INTO `berita` (`id_berita`, `id_user`, `id_kategori`, `bahasa`, `updater`, `slug_berita`, `judul_berita`, `isi`, `status_berita`, `jenis_berita`, `keywords`, `gambar`, `icon`, `hits`, `urutan`, `tanggal_mulai`, `tanggal_selesai`, `tanggal_post`, `tanggal_publish`, `tanggal`) VALUES
 	(8, 4, 0, 'ID', '', 'kursus-wordpress-mastering-cms', 'Kursus Wordpress (Mastering CMS)', '<h2>Deskripsi ringkas</h2>\r\n\r\n<p>Anda akan belajar membangun website pribadi, perusahaan, toko online dengan platform CMS (Content Management System) Wordpress dan database MySQL. Kursus ini tidak memerlukan koding yang berat. Cocok untuk yang ingin membuat website instan dengan cepat.</p>\r\n\r\n<hr />\r\n<p>Anda akan belajar membangun website pribadi, perusahaan,&nbsp;<strong>toko online&nbsp;</strong>dengan platform&nbsp;<strong>CMS (<em>Content Management System)&nbsp;</em>Wordpress</strong>&nbsp;dan database MySQL. Kursus ini tidak memerlukan koding yang berat. Cocok untuk yang ingin membuat website instan dengan cepat.</p>\r\n\r\n<h2><a name="_Toc32320282"></a>Materi kursus</h2>\r\n\r\n<p>Anda akan mempelajari hal-hal berikut ini:</p>\r\n\r\n<ul>\r\n	<li>Dasar-dasar HTML5, CSS3 dan Bootstrap</li>\r\n	<li>Pembuatan website profil perusahaan dengan Wordpress</li>\r\n	<li>Pembuatan website&nbsp;<strong><em>online store</em></strong>&nbsp;dengan Wordpress dengan plugin Woocommerce</li>\r\n</ul>\r\n\r\n<h2><a name="_Toc32320283"></a>Tujuan Kursus</h2>\r\n\r\n<p>Setelah Anda belajar&nbsp;di&nbsp;<strong>Kursus Web Design</strong>, Anda dapat:</p>\r\n\r\n<ul>\r\n	<li>Mengelola konten website dengan CMS.</li>\r\n	<li>Membangun website profil perusahaan dan&nbsp;<strong><em>online store</em></strong>&nbsp;dengan CMS Wordpress</li>\r\n	<li>Bekerja sebagai&nbsp;<strong>Content Creator dan Admin Toko Online.</strong></li>\r\n</ul>\r\n\r\n<h2><a name="_Toc32320284"></a>Urutan materi</h2>\r\n\r\n<ol>\r\n	<li>Installasi Software pendukung</li>\r\n	<li>Dasar-dasar layouting dengan HTML dan CSS</li>\r\n	<li>Installasi CMS Wordpress</li>\r\n	<li>Pembuatan website&nbsp;<strong><em>company profile</em></strong></li>\r\n	<li>Mengelola plugin, widget dan menu</li>\r\n	<li>Memilih, mengelola dan mengubah template Wordpress</li>\r\n	<li>Pembuatan toko online dengan Plugin Woocommerce</li>\r\n	<li>Pengelolaan konten website, produk dan order toko online</li>\r\n	<li>Optimasi website Wordpress</li>\r\n	<li>Security website Wordpress</li>\r\n	<li>Pendaftaran website&nbsp;<em>Google Webmaster, Google Anayltic dan Google Business</em></li>\r\n</ol>\r\n\r\n<h2><a name="_Toc32320285"></a>Software yang digunakan</h2>\r\n\r\n<p>XAMPP, Sublime Text/Notepad/Visual Studio, Browser, Aplikasi pengolah gambar</p>\r\n\r\n<h3>&nbsp;</h3>', 'Publish', 'Layanan', 'Anda akan belajar membangun website pribadi, perusahaan, toko online dengan Wordpress. Kursus ini tidak memerlukan koding yang berat. Cocok untuk membuat website instan dengan cepat.', '1-1600727475.png', 'fa fa-globe', 82, 3, NULL, NULL, '2020-01-16 08:04:58', '2020-01-16 08:01:54', '2020-09-21 22:40:26'),
 	(9, 4, 0, 'ID', '', 'kursus-advanced-web-programming', 'Kursus Advanced Web Programming', '<h2>Deskripsi ringkas</h2>\r\n\r\n<p>Anda akan belajar membangun aplikasi berbasis website (web based application) dengan menggunakan bootstrap, framework JavaScript, PHP framework Codeigniter/Laravel dan database MySQL.</p>\r\n\r\n<hr />\r\n<p>Anda akan belajar membangun&nbsp;<strong>aplikasi berbasis website (<em>web based application</em>)</strong>&nbsp;dengan menggunakan bootstrap, framework JavaScript,&nbsp;<strong><em>PHP framework</em></strong><em>&nbsp;<strong>Codeigniter/Laravel&nbsp;</strong></em>dan database MySQL.</p>\r\n\r\n<h2><a name="_Toc32320307"></a>Materi kursus</h2>\r\n\r\n<p>Anda akan mempelajari hal-hal berikut ini:</p>\r\n\r\n<ul>\r\n	<li>Membangun aplikasi berbasis website</li>\r\n	<li>Membuat laporan dengan berbagai format (PDF, Excel, Word dll)</li>\r\n	<li>Membangun web service (API)</li>\r\n	<li>Membangun aplikasi web dengan berbagai database (MySQL, Oracle, SQL Server, PostgreSQL dll)</li>\r\n	<li><strong><em>Data visualization</em></strong>&nbsp;(format grafik dan peta digital)</li>\r\n</ul>\r\n\r\n<h2><a name="_Toc32320308"></a>Tujuan Kursus</h2>\r\n\r\n<p>Setelah Anda belajar&nbsp;di&nbsp;<strong>Kursus Web Development</strong>, Anda akan dapat:</p>\r\n\r\n<ul>\r\n	<li>Membangun aplikasi kompleks berbasis web dengan berbagai database</li>\r\n	<li>Bekerja sebagai&nbsp;<strong>&nbsp;Senior Web Web Developer.</strong></li>\r\n</ul>\r\n\r\n<h2><a name="_Toc32320309"></a>Urutan materi</h2>\r\n\r\n<ol>\r\n	<li>Installasi Software pendukung</li>\r\n	<li>Merencanakan, membuat &amp; mengelola database MySQL</li>\r\n	<li>Integrasi template&nbsp;<em>front end&nbsp;</em>dan&nbsp;<em>back end&nbsp;</em>dengan framework PHP</li>\r\n	<li>Authentication (Login, Logout &amp; Proteksi Halaman)</li>\r\n	<li>CRUD&nbsp;<em>(Create, Read, Update &amp; Delete)&nbsp;</em>Dasar</li>\r\n	<li>CRUD Kompleks dengan relasi database</li>\r\n	<li>Membuat berbagai jenis laporan (PDF, Excel, Word, Web Service/API, dll)</li>\r\n	<li>Membuat data visualization (Grafik dan Peta Digital)</li>\r\n	<li>Security review atas aplikasi yang telah dibuat</li>\r\n	<li>Version control dengan Git</li>\r\n	<li>Upload web ke hosting atau meng-onlinekan website</li>\r\n</ol>\r\n\r\n<h2><a name="_Toc32320310"></a>Software yang digunakan</h2>\r\n\r\n<p>XAMPP, Sublime Text/Notepad/Visual Studio, Browser, Aplikasi pengolah gambar, Composer dll.</p>', 'Publish', 'Layanan', 'Anda akan belajar membangun aplikasi berbasis website (web based application) dengan menggunakan bootstrap, framework JavaScript, PHP framework Codeigniter/Laravel dan database MySQL.', '6-1600727385.png', 'fa fa-laptop', 69, 2, NULL, NULL, '2020-01-16 08:08:16', '2020-01-16 08:07:46', '2020-09-21 22:29:46'),
@@ -90,7 +90,7 @@ INSERT INTO `berita` (`id_berita`, `id_user`, `id_kategori`, `bahasa`, `updater`
 	(26, 4, 0, 'ID', '-', 'platform-e-tools-untuk-anggota-aws', 'Platform e-Tools untuk Anggota AWS', '<p><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Cari tahu lebih lanjut tentang e-standar AWS, Panduan juga Modul Pembelajaran Online penatalayanan air di <a href="https://tools.a4ws.org/my-account/subscriptions/" style="color:#0563c1; text-decoration:underline">AWS Tool Hub</a>. Akses gratis untuk semua Anggota AWS dan non-anggota dapat membayar biaya untuk membuat akun.</span></span></p>', 'Publish', 'Materi', 'Platform e-Tools untuk Anggota AWS', NULL, NULL, NULL, NULL, NULL, NULL, '2020-09-16 01:28:44', '2020-09-16 01:27:50', '2020-09-16 01:28:44'),
 	(27, 4, 0, 'ID', '-', 'webinars', 'Webinars', '<p><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Dapatkan wawasan Anda mengenai Standar dan Sistem AWS melalui webinar AWS dan diskusi penting lainnya tentang topik penatalayanan air di Indonesia.</span></span></p>\r\n\r\n<ul>\r\n	<li><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">World Water Development Report 2020 Launch by UNESCO &amp; Climate Tracker </span></span><br />\r\n	<span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Lainnya: <a href="https://unesdoc.unesco.org/ark:/48223/pf0000372985.locale=en" style="color:#0563c1; text-decoration:underline">Laporan</a></span></span></li>\r\n	<li><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">GWPSEA Webinar COVID-19 Belajar dari Krisis untuk Pengelolaan Air Terpadu yang Lebih<br />\r\n	Rekaman: <a href="https://www.facebook.com/GlobalWaterPartnershipSoutheastAsia/videos/271658824268924/?_rdc=1&amp;_rdr" style="color:#0563c1; text-decoration:underline">Tersedia</a></span></span></li>\r\n	<li><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Air Tanah untuk Tanah Air</span></span><br />\r\n	<span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Rekaman: <a href="bit.ly/youtube-airtanah" style="color:#0563c1; text-decoration:underline">Tersedia</a></span></span></li>\r\n	<li><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Online Consultation &ndash; the Principles for Addressing Water-related Disaster Risk Reduction and COVID-19 </span></span><br />\r\n	<span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Lainnya: <a href="https://www.gwp.org/en/GWP-South-East-Asia/WE-ACT/keep-updated/News-and-Activities/2020/help-gwp-pan-asia-consultation-meeting/" style="color:#0563c1; text-decoration:underline">Summary</a></span></span></li>\r\n	<li><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">AWS Member Webinars: Spotlight on Indonesia Brantas River Basin, East Java</span></span><br />\r\n	<span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Rekaman: <a href="https://register.gotowebinar.com/recording/4530186227396155147" style="color:#0563c1; text-decoration:underline">Tersedia</a></span></span></li>\r\n	<li><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">World Water Week #AtHome 2020 &ndash; Water Stewardship in Agriculture</span></span><br />\r\n	<span style="font-size:10pt"><span style="font-family:&quot;Arial Nova Light&quot;,sans-serif">Rekaman: <a href="https://register.gotowebinar.com/recording/8511901561510833158" style="color:#0563c1; text-decoration:underline">Tersedia</a></span></span></li>\r\n</ul>', 'Publish', 'Materi', 'Webinars', NULL, NULL, NULL, NULL, NULL, NULL, '2020-09-16 01:31:45', '2020-09-16 01:30:55', '2020-09-16 01:31:45');
 
--- Dumping structure for table compro.download
+-- Dumping structure for table jemari_edu.download
 CREATE TABLE IF NOT EXISTS `download` (
   `id_download` int NOT NULL AUTO_INCREMENT,
   `id_kategori_download` int NOT NULL,
@@ -106,13 +106,13 @@ CREATE TABLE IF NOT EXISTS `download` (
   PRIMARY KEY (`id_download`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.download: ~3 rows (approximately)
+-- Dumping data for table jemari_edu.download: ~3 rows (approximately)
 INSERT INTO `download` (`id_download`, `id_kategori_download`, `id_user`, `bahasa`, `judul_download`, `jenis_download`, `isi`, `gambar`, `website`, `hits`, `tanggal`) VALUES
 	(3, 1, 4, 'ID', 'The AWS Standard 2.0 Bahasa Indonesia', 'Download', '<p>Versi Bahasa Indonesia dari AWS Standar, Panduan dan Skoring Rubrik sudah tersedia online. <a href="https://a4ws.org/download-standard-2/" style="color:#0563c1; text-decoration:underline">Unduh</a> untuk Anda sekarang dan hubungi tim kami di Indonesia untuk mendukung Anda dalam perjalanan penatalayanan air.</p>', 'aws-standard-20-2019-bahasa-indonesia-1600653859.pdf', NULL, 22, '2020-09-21 02:06:43'),
 	(4, 1, 4, 'ID', 'The AWS Standard Guidance 2.0 Bahasa Indonesia', 'Download', '<p>The AWS Standard Guidance 2.0 Bahasa Indonesia</p>', 'aws-standard-20-guidance-final-january-2020-bahasa-indonesia-1600654043.pdf', NULL, 2, '2020-09-21 02:08:09'),
 	(5, 1, 4, 'ID', 'The AWS Standard Scoring 2.0 Bahasa Indonesia', 'Download', '<p>The AWS Standard Scoring 2.0 Bahasa Indonesia</p>', 'aws-standard-20-scoring-criteria-revised-june-1-2020-bahasa-indonesia-1600654078.pdf', NULL, 0, '2020-09-21 02:07:58');
 
--- Dumping structure for table compro.galeri
+-- Dumping structure for table jemari_edu.galeri
 CREATE TABLE IF NOT EXISTS `galeri` (
   `id_galeri` int NOT NULL AUTO_INCREMENT,
   `id_kategori_galeri` int NOT NULL,
@@ -131,11 +131,11 @@ CREATE TABLE IF NOT EXISTS `galeri` (
   PRIMARY KEY (`id_galeri`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.galeri: ~1 rows (approximately)
+-- Dumping data for table jemari_edu.galeri: ~1 rows (approximately)
 INSERT INTO `galeri` (`id_galeri`, `id_kategori_galeri`, `id_user`, `bahasa`, `judul_galeri`, `jenis_galeri`, `isi`, `gambar`, `website`, `hits`, `popup_status`, `urutan`, `status_text`, `tanggal`) VALUES
 	(15, 4, 15, 'ID', 'Jemari Edu', 'Homepage', NULL, 'banner-3-1-1600727828-1741675500.png', 'https://javawebmedia.com/kursus', 1, 'Publish', NULL, 'Ya', '2025-03-11 06:45:01');
 
--- Dumping structure for table compro.heading
+-- Dumping structure for table jemari_edu.heading
 CREATE TABLE IF NOT EXISTS `heading` (
   `id_heading` int NOT NULL AUTO_INCREMENT,
   `id_user` int DEFAULT '0',
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `heading` (
   PRIMARY KEY (`id_heading`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.heading: ~6 rows (approximately)
+-- Dumping data for table jemari_edu.heading: ~6 rows (approximately)
 INSERT INTO `heading` (`id_heading`, `id_user`, `judul_heading`, `keterangan`, `gambar`, `halaman`, `tanggal`) VALUES
 	(1, 0, 'Berita dan Updates', '<p>Berita dan Updates</p>', 'heading-03-1600256326.jpg', 'Berita', '2020-09-16 11:38:46'),
 	(2, 0, 'AWS Indonesia', '<p>AWS Indonesia</p>', 'aws-indonesia-1600259780.jpg', 'AWS', '2020-09-16 12:36:20'),
@@ -156,7 +156,7 @@ INSERT INTO `heading` (`id_heading`, `id_user`, `judul_heading`, `keterangan`, `
 	(5, 0, 'Layanan', '<p>Penatalayanan air memungkinkan pengguna air bekerjasama untuk mengidentifikasi dan mencapai tujuan bersama untuk pengelolaan air yang berkelanjutan dan keamanan air bersama. Penatalayanan air yang baik didefinisikan sebagai penggunaan air yang adil secara sosial dan budaya, berkelanjutan secara lingkungan dan menguntungkan secara ekonomi, dicapai melalui proses inklusif pemangku kepentingan yang mencakup tindakan berbasis wilayah operasional dan daerah tangkapan air (DAS).</p>\r\n<p>AWS Indonesia meripakan promosi dan penerapan penatalayanan air yang baik dan standar penatalayanan air internasional (<a href="https://a4ws.org/the-aws-standard-2-0/">AWS Standard</a>) di Indonesia sebagai mitra negara <a href="https://waterstewardship.org.au/">Alliance for Water Stewardship Asia-Pacific</a> dan <a href="https://a4ws.org/about/">Alliance for Water Stewardship SCIO</a>.</p>\r\n<p>Apakah Anda tertarik untuk mempelajari lebih lanjut mengenai penatalayanan air dan aktivitas kami di Indonesia? Apakah Anda Manajer Sustainability atau Engineer Air yang ingin menerapkan penatalayanan air di wilayah operasional Anda? Hubungi kami dan mari kita mulai penatalayanan air bersama-sama.</p>', 'layanan-1600315713.jpg', 'Layanan', '2020-09-17 04:08:33'),
 	(6, 0, 'Dokumen', '<p>Dokumen</p>', 'dokumen-1600317093.jpg', 'Dokumen', '2020-09-17 04:31:33');
 
--- Dumping structure for table compro.kategori
+-- Dumping structure for table jemari_edu.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
   `id_kategori` int NOT NULL AUTO_INCREMENT,
   `id_user` int NOT NULL,
@@ -170,12 +170,12 @@ CREATE TABLE IF NOT EXISTS `kategori` (
   UNIQUE KEY `nama_kategori` (`nama_kategori`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.kategori: ~2 rows (approximately)
+-- Dumping data for table jemari_edu.kategori: ~2 rows (approximately)
 INSERT INTO `kategori` (`id_kategori`, `id_user`, `bahasa`, `slug_kategori`, `nama_kategori`, `urutan`, `hits`, `tanggal`) VALUES
 	(6, 4, 'ID', 'berita', 'Berita', 3, 0, '2020-09-12 21:36:42'),
 	(8, 4, 'ID', 'updates', 'Updates', 2, NULL, '2020-09-12 21:36:35');
 
--- Dumping structure for table compro.kategori_agenda
+-- Dumping structure for table jemari_edu.kategori_agenda
 CREATE TABLE IF NOT EXISTS `kategori_agenda` (
   `id_kategori_agenda` int NOT NULL AUTO_INCREMENT,
   `bahasa` enum('ID','EN') NOT NULL,
@@ -186,12 +186,12 @@ CREATE TABLE IF NOT EXISTS `kategori_agenda` (
   PRIMARY KEY (`id_kategori_agenda`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.kategori_agenda: ~2 rows (approximately)
+-- Dumping data for table jemari_edu.kategori_agenda: ~2 rows (approximately)
 INSERT INTO `kategori_agenda` (`id_kategori_agenda`, `bahasa`, `slug_kategori_agenda`, `nama_kategori_agenda`, `keterangan`, `urutan`) VALUES
 	(4, 'ID', 'kegiatan-eksternal', 'Kegiatan Eksternal', NULL, 2),
 	(6, 'ID', 'kegiatan-internal', 'Kegiatan Internal', NULL, 1);
 
--- Dumping structure for table compro.kategori_download
+-- Dumping structure for table jemari_edu.kategori_download
 CREATE TABLE IF NOT EXISTS `kategori_download` (
   `id_kategori_download` int NOT NULL AUTO_INCREMENT,
   `bahasa` enum('ID','EN') NOT NULL,
@@ -202,14 +202,14 @@ CREATE TABLE IF NOT EXISTS `kategori_download` (
   PRIMARY KEY (`id_kategori_download`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.kategori_download: ~4 rows (approximately)
+-- Dumping data for table jemari_edu.kategori_download: ~4 rows (approximately)
 INSERT INTO `kategori_download` (`id_kategori_download`, `bahasa`, `slug_kategori_download`, `nama_kategori_download`, `keterangan`, `urutan`) VALUES
 	(1, 'ID', 'dokumen', 'Dokumen', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 1),
 	(4, 'ID', 'download-pricelist', 'Download Pricelist', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 0),
 	(5, 'ID', 'studi-kasus', 'Studi Kasus', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 2),
 	(6, 'ID', 'webinar', 'Webinar', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 3);
 
--- Dumping structure for table compro.kategori_galeri
+-- Dumping structure for table jemari_edu.kategori_galeri
 CREATE TABLE IF NOT EXISTS `kategori_galeri` (
   `id_kategori_galeri` int NOT NULL AUTO_INCREMENT,
   `bahasa` enum('ID','EN') NOT NULL,
@@ -219,12 +219,12 @@ CREATE TABLE IF NOT EXISTS `kategori_galeri` (
   PRIMARY KEY (`id_kategori_galeri`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.kategori_galeri: ~2 rows (approximately)
+-- Dumping data for table jemari_edu.kategori_galeri: ~2 rows (approximately)
 INSERT INTO `kategori_galeri` (`id_kategori_galeri`, `bahasa`, `slug_kategori_galeri`, `nama_kategori_galeri`, `urutan`) VALUES
 	(4, 'ID', 'kegiatan', 'Kegiatan', 2),
 	(6, 'ID', 'kegiatan-kampus', 'Kegiatan Kampus', 1);
 
--- Dumping structure for table compro.kategori_staff
+-- Dumping structure for table jemari_edu.kategori_staff
 CREATE TABLE IF NOT EXISTS `kategori_staff` (
   `id_kategori_staff` int NOT NULL AUTO_INCREMENT,
   `bahasa` enum('ID','EN') NOT NULL,
@@ -235,12 +235,12 @@ CREATE TABLE IF NOT EXISTS `kategori_staff` (
   PRIMARY KEY (`id_kategori_staff`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.kategori_staff: ~2 rows (approximately)
+-- Dumping data for table jemari_edu.kategori_staff: ~2 rows (approximately)
 INSERT INTO `kategori_staff` (`id_kategori_staff`, `bahasa`, `slug_kategori_staff`, `nama_kategori_staff`, `keterangan`, `urutan`) VALUES
 	(4, 'ID', 'senyum-programmer', 'Senyum Programmer', 'Yeay...selain tim tutor kita juga ada tim programmer yang bekerja full time maupun part time', 2),
 	(6, 'ID', 'happy-tutor', 'Happy Tutor', 'Jemari Edu didampingi oleh tutor-tutor dan instruktur yang berpengalaman di bidangnya.', 1);
 
--- Dumping structure for table compro.konfigurasi
+-- Dumping structure for table jemari_edu.konfigurasi
 CREATE TABLE IF NOT EXISTS `konfigurasi` (
   `id_konfigurasi` int NOT NULL AUTO_INCREMENT,
   `bahasa` enum('ID','EN') NOT NULL,
@@ -325,13 +325,13 @@ CREATE TABLE IF NOT EXISTS `konfigurasi` (
   PRIMARY KEY (`id_konfigurasi`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.konfigurasi: 1 rows
+-- Dumping data for table jemari_edu.konfigurasi: 1 rows
 /*!40000 ALTER TABLE `konfigurasi` DISABLE KEYS */;
 INSERT INTO `konfigurasi` (`id_konfigurasi`, `bahasa`, `namaweb`, `nama_singkat`, `tagline`, `tagline2`, `tentang`, `deskripsi`, `website`, `email`, `email_cadangan`, `alamat`, `telepon`, `hp`, `fax`, `logo`, `icon`, `keywords`, `metatext`, `facebook`, `twitter`, `instagram`, `google_plus`, `nama_facebook`, `nama_twitter`, `nama_instagram`, `nama_google_plus`, `singkatan`, `google_map`, `judul_1`, `pesan_1`, `judul_2`, `pesan_2`, `judul_3`, `pesan_3`, `judul_4`, `pesan_4`, `judul_5`, `pesan_5`, `judul_6`, `pesan_6`, `isi_1`, `isi_2`, `isi_3`, `isi_4`, `isi_5`, `isi_6`, `link_1`, `link_2`, `link_3`, `link_4`, `link_5`, `link_6`, `javawebmedia`, `gambar`, `video`, `rekening`, `prolog_topik`, `prolog_program`, `prolog_sekretariat`, `prolog_aksi`, `prolog_kolaborasi`, `prolog_sebaran`, `gambar_berita`, `prolog_agenda`, `prolog_wawasan`, `protocol`, `smtp_host`, `smtp_port`, `smtp_timeout`, `smtp_user`, `smtp_pass`, `judul_pembayaran`, `isi_pembayaran`, `gambar_pembayaran`, `link_bawah_peta`, `text_bawah_peta`, `cara_pesan`, `id_user`, `tanggal`) VALUES
 	(1, 'ID', 'Jemari Edu', 'Jemari Edu', 'Pusat Kursus Private &  Kelas Web, Mobile Apps, Desain Grafis dan Statistik', 'Pusat Kursus Private &  Kelas Web, Mobile Apps, Desain Grafis dan Statistik', '<p>Jemari Edu adalah Pusat Kursus Private dan Reguler bidang Desain Grafis, Web Programming, Mobile Application dan Statistik</p>\r\n\r\n<p>Jemari Edu berdiri pada tanggal 26 April 2010. Jemari Edu awalnya hanya bergerak di bidang pembuatan dan pengembangan website serta agensi desain grafis. Awal tahun 2011, perusahaan ini kemudian mulai bergerak di bidang pengembangan sumber daya manusia, khususnya di bidang keahlian computer&nbsp;<em>Graphic Design</em>,&nbsp;<em>Web Design</em>&nbsp;dan&nbsp;<em>Web Development.</em></p>\r\n\r\n<p>Jemari Edu adalah lembaga kursus yang bergerak di bidang pendidikan khususnya kursus website, digital marketing, desain grafis dan statistik. Sampai saat ini Jemari Edu sudah memiliki lulusan lebih dari 1200 orang dari berbagai status dan profesi mulai dari pelajar sekolah, mahasiswa, guru, dosen, staff profesional, freelancer, dll. Lulusan tidak hanya dari Indonesia tapi juga dari beberapa negara tetangga seperti New Zealand, Timor Leste dan Malaysia.</p>\r\n\r\n<p>Jemari Edu membuka cabang pertamanya pada tahun 2014. Hingga tahun 2020 ini, Jemari Edu telah memiliki 2 cabang yang berlokasi di kota Depok.</p>\r\n\r\n<p>Selain bergerak di bidang pendidikan Jemari Edu juga memiliki layanan di bidang perencanaan strategis sistem informasi, pengembangan aplikasi berbasis web dan berbasis mobile (Android dan IOS/Apple).</p>\r\n\r\n<p>&nbsp;</p>', 'Grow And Strengthen Leadership On Good Water Stewardship For Water Secure In Indonesia, Now And The Feature.', 'https://javawebmedia.com', 'contact@jemari-edu.web.id', 'javawebmedia@gmail.com', 'Mall Depok Town Square\r\nLt 2 Blok SS1 No. 5-7\r\nJl. Margonda Raya Kota Depok', '085715100485', '+6281210697841', '081210697841', 'logo-java-web-media-01-01.png', 'logo-javawebmedia-square.png', 'educamedia, Jemari Edu, laravel, online course, kursus online', NULL, 'https://www.facebook.com/javawebmedia', 'http://twitter.com/javawebmedia', 'https://instagram.com/javawebmedia', 'https://www.youtube.com/channel/UCmm6mFZXYQ3ZylUMa0Tmc2Q', 'Educamedia', 'Educamedia', 'Educamedia', '', 'JWM', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7930.3386078467065!2d106.82893243028725!3d-6.372131203377098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed5d166b756d%3A0x41d8cdc14c819774!2sDepok%20Town%20Square!5e0!3m2!1sen!2sid!4v1579565022446!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 'Tempat belajar nyaman', 'fa fa-home', 'Materi Kursus Selalu Update', 'fa fa-laptop', 'Jadwal Flexibel', 'fa fa-thumbs-up', 'Menjaga Amanah', 'fa-check-square-o', 'Tempat belajar nyaman', 'fa-home', 'Online service', 'fa-laptop', 'Kami menyediakan tempat belajar yang nyaman dan menyenangkan serasa di rumah sendiri', 'Materi kursus kamu selalu uptodate, Anda bisa mengunduh apa yang dipelajari', 'Bagi Anda siswa yang ingin belajar, kami menerapkan jadwal flexibel', 'Kami senantiasa menjaga amanah yang diberikan kepada donatur agar sampai di tangan yang berhak.', 'Kami menyediakan tempat belajar yang nyaman dan menyenangkan', 'Website kamu selalu uptodate, Anda bisa mengunduh apa yang dipelajari', '', '', '', '', '', '', '<p>Berawal dari keinginan ibunda Hj.Masah Muhari diakhir hidupnya untuk mewakaan sebagian hartanya dijalan Allah, gayungpun bersambut pada bulan Mei 2011 saat kami akan melaksanakan ibadah umrah, Seorang rekan kami sesama Jamaah bernama ustadzah Hj. Zainur Fahmid memberikan informasi Tentang Anggota yang hendak mewakaan sebidang tanahnya di wilayah Beji Timur. Kami pun memanjatkan doa di kota suci dengan penuh rasa harap pertolongan Allah untuk menunjukan jalan terbaik-Nya, maka sepulang umroh kami mengadakan pertemuan di kediaman Ibu Dra Hj Ratna Mardjanah untuk membicarakan visi misi kami dalam wakaf tersebut dan sepakat untuk mendirikan Istana Yatim Riyadhul Jannah ini.</p>\r\n<p>Nama Riyadhul Jannah Sendiri diambil dari nama pengelola wakaf (H. Ahmad Riyadh Muchtar, Lc) dan pemberi wakaf (Dra Hj Ratna Mardjanah). Istana Yatim Riyadhul Jannah hadir untuk melayani dan memfasilitasi segala kebutuhan anak yatim, terutama pendidikan agama, akhlak dan kehidupan yang layak untuk bekal masa depan mereka yang cerah agar bisa memberi manfaat bagi umat. Harapan kami semoga dengan membangunkan istana untuk anak yatim, maka Allah akan berikan istana-Nya di surga kelak dan kita termasuk manusia yang bisa memberika manfaat bagi sesama sebagaimana sabda Rasulullah SAW yang artinya:&nbsp;</p>\r\n<p>&ldquo;Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya&rdquo;&nbsp;</p>\r\n<p>erimakasih atas segala bentuk bantuan yang dipercayakan kepada kami baik secara materi, tenaga dan kiran serta doa para muhsinin dan muhsinat Istana Yatim Riyadhul Jannah selama ini, mulai dari rencana pendirian hingga berkembang seperti saat ini. Semoga segala amal menjadi shadaqah jariyah disisi-Nya.&nbsp;</p>\r\n<p>&nbsp;</p>', '7.png', 'fsH_KhUWfho', '<table id="dataTables-example" class="table table-bordered" width="100%">\r\n<thead>\r\n<tr>\r\n<th tabindex="0" colspan="1" rowspan="1" width="19%">Nama Bank</th>\r\n<th tabindex="0" colspan="1" rowspan="1" width="21%">Nomor Rekening</th>\r\n<th tabindex="0" colspan="1" rowspan="1" width="7%">Atas nama</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td>BCA KCP Margo City</td>\r\n<td>4212548204</td>\r\n<td>Andoyo</td>\r\n</tr>\r\n<tr>\r\n<td>Bank Mandiri KCP Universitas Indonesia</td>\r\n<td>1570001807768</td>\r\n<td>Eflita Meiyetriani</td>\r\n</tr>\r\n<tr>\r\n<td>Bank BNI Syariah Kantor Cabang Jakarta Selatan</td>\r\n<td>0105301001</td>\r\n<td>Eflita Meiyetriani</td>\r\n</tr>\r\n</tbody>\r\n</table>', '<p>Dalam mewujudkan pembangunan berkelanjutan, pemerintah kabupaten anggota LTKL telah mengidentifikasi dan memilih topik yang sesuai dengan kondisi di daerahnya. Ada 5 topik prioritas yang dipilih dengan penerapan yang disesuaikan kembali di masing-masing kabupaten.</p>', NULL, '<p>Setelah Lingkar Temu Kabupaten Lestari (LTKL) diinisiasi, kesekretariatan dibentuk untuk membantu para pemerintah kabupaten anggota bekerja dan berkolaborasi. Walaupun tidak memiliki mandat implementasi, Sekretariat LTKL menjadi vital dalam melancarkan koordinasi, pengumpulan basis data, hingga pelaporan perkembangan. Sekretariat LTKL juga diperkuat dengan kehadiran personil yang telah berpengalaman di bidang management pengetahuan, program pembangunan berkelanjutan hingga kebijakan.</p>', '', '<p>Lingkar Temu Kabupaten Lestari (LTKL) mengedepankan kolaborasi dalam mewududkan pembangunan berkelanjutan. Ada 10 kabupaten yang tersebar di 6 provinsi di Indonesia telah menjadi anggota LTKL.</p>\r\n<p>Hingga kini, berbagai pihak telah ikut berkolaborasi, mulai dari pemerintah kabupaten, sekeretariat LTKL, mitra pembangunan hingga pihak swasta.</p>', '', 'balairung-budiutomo-01.jpg', '<p>Acara yang ditampilkan merupakan kumpulan acara LTKL, mitra, maupun pemerintah kabupaten anggota LTKL, mulai dari acara seminar hingga festival.</p>', '<p>LTKL bukan satu-satunya yang bergerak dalam mewujudkan pembangunan berkelanjutan, serta upaya penanggulangan perubahan iklim. Ikuti terus perkembangan usaha LTKL serta rekan-rekan lain menuju bumi dan Indonesia yang lestari.</p>', 'smtp', 'ssl://mail.jemari-edu.web.id', '465', '12', 'info@jemari-edu.web.id', 'jemariedu', 'Metode Pembayaran Produk', '<p>Anda dapat melakukan pembayaran dengan beberapa cara, yaitu:</p>\r\n<ol>\r\n<li><strong>Pembayaran Tunai</strong>, dapat Anda serahkan secara langsung ke salah satu staff Jemari Edu</li>\r\n<li><strong>Pembayar Via Transfer Rekening</strong></li>\r\n</ol>\r\n<p>Lakukan transfer biaya atas layanan dan produk&nbsp;<strong>Jemari Edu</strong>&nbsp;ke salah satu rekening di bawah ini.</p>\r\n<h3>Konfirmasi Pembayaran</h3>\r\n<p>Anda dapat melakukan konfirmasi pembayaran melalui:</p>\r\n<ul>\r\n<li><strong>Melalui Email</strong>, silakan kirim bukti pembayaran ke:&nbsp;<strong><a href="mailto:contact@jemari-edu.web.id?subject=Konfirmasi%20Pembayaran">contact@jemari-edu.web.id</a></strong></li>\r\n<li><strong>Melalui Whatsapp</strong>, kirimkan bukti pembayaran Anda ke&nbsp;<strong>+6281210697841</strong></li>\r\n<li><strong>Melalui Formulir Konfirmasi Pembayaran</strong>, Anda dapat mengunggah bukti pembayaran Anda melalui form&nbsp;<strong><a title="Konfirmasi Pembayaran" href="https://javawebmedia.com/konfirmasi">&nbsp;Konfirmasi Pembayaran</a></strong></li>\r\n</ul>', 'payment.jpg', NULL, NULL, 'Formulir Pemesanan', 15, '2025-03-11 07:22:08');
 /*!40000 ALTER TABLE `konfigurasi` ENABLE KEYS */;
 
--- Dumping structure for table compro.migrations
+-- Dumping structure for table jemari_edu.migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -339,9 +339,9 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table compro.migrations: ~0 rows (approximately)
+-- Dumping data for table jemari_edu.migrations: ~0 rows (approximately)
 
--- Dumping structure for table compro.rekening
+-- Dumping structure for table jemari_edu.rekening
 CREATE TABLE IF NOT EXISTS `rekening` (
   `id_rekening` int NOT NULL AUTO_INCREMENT,
   `nama_bank` varchar(255) NOT NULL,
@@ -353,14 +353,14 @@ CREATE TABLE IF NOT EXISTS `rekening` (
   PRIMARY KEY (`id_rekening`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.rekening: ~4 rows (approximately)
+-- Dumping data for table jemari_edu.rekening: ~4 rows (approximately)
 INSERT INTO `rekening` (`id_rekening`, `nama_bank`, `nomor_rekening`, `atas_nama`, `gambar`, `urutan`, `tanggal`) VALUES
 	(1, 'BCA KCP DEPOK', '4212-5482-04', 'ANDOYO', 'bca.jpg', 1, '2020-06-11 21:36:46'),
 	(2, 'BNI SYARIAH DEPOK', '0611-9927-06', 'CV Jemari Edu', 'Logo_BNI_Syariah.png', 2, '2019-11-12 23:54:18'),
 	(4, 'BANK MANDIRI KCU DEPOK', '157-00-0180776-8', 'EFLITA MEIYETRIANI', 'mandiri.png', 4, '2019-11-12 23:58:42'),
 	(5, 'BANK BNI KCU DEPOK', '0105-3010-01', 'EFLITA MEIYETRIANI', 'bni.png', 5, '2019-11-13 00:00:13');
 
--- Dumping structure for table compro.staff
+-- Dumping structure for table jemari_edu.staff
 CREATE TABLE IF NOT EXISTS `staff` (
   `id_staff` int NOT NULL AUTO_INCREMENT,
   `id_user` int DEFAULT NULL,
@@ -381,7 +381,7 @@ CREATE TABLE IF NOT EXISTS `staff` (
   PRIMARY KEY (`id_staff`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.staff: ~8 rows (approximately)
+-- Dumping data for table jemari_edu.staff: ~8 rows (approximately)
 INSERT INTO `staff` (`id_staff`, `id_user`, `id_kategori_staff`, `slug_staff`, `nama_staff`, `jabatan`, `pendidikan`, `expertise`, `email`, `telepon`, `isi`, `gambar`, `status_staff`, `keywords`, `urutan`, `tanggal`) VALUES
 	(1, 15, 4, 'bina-rika-program-director', 'Bina Rika', 'Program Director', NULL, NULL, NULL, NULL, NULL, 'board-and-team-01-1599999423a.png', 'Tidak', NULL, 1, '2025-03-11 07:25:51'),
 	(2, 15, 4, 'karyani-knowledge-and-learning-officer', 'Karyani', 'Knowledge and Learning Officer', NULL, NULL, NULL, NULL, NULL, 'board-and-team-05-15a99999506.png', 'Tidak', NULL, 2, '2025-03-11 07:25:29'),
@@ -392,7 +392,7 @@ INSERT INTO `staff` (`id_staff`, `id_user`, `id_kategori_staff`, `slug_staff`, `
 	(7, 15, 6, 'gungwik-dewi-lestari-sekretaris-dewan-pengurus', 'Gungwik Dewi Lestari', 'Sekretaris Dewan Pengurus', 'S1', NULL, NULL, NULL, NULL, 'gungwik-1741669362.jpg', 'Ya', NULL, 4, '2025-03-11 05:03:00'),
 	(8, 15, 6, 'dani-widya-bendahara-dewan-pengurus', 'Dani Widya', 'Bendahara Dewan Pengurus', NULL, NULL, NULL, NULL, NULL, 'board-and-team-02-160000a0191.png', 'Tidak', NULL, 5, '2025-03-11 04:58:47');
 
--- Dumping structure for table compro.users
+-- Dumping structure for table jemari_edu.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id_user` int NOT NULL AUTO_INCREMENT,
   `nama` varchar(50) NOT NULL,
@@ -407,13 +407,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.users: ~3 rows (approximately)
+-- Dumping data for table jemari_edu.users: ~3 rows (approximately)
 INSERT INTO `users` (`id_user`, `nama`, `email`, `username`, `password`, `akses_level`, `kode_rahasia`, `gambar`, `tanggal`) VALUES
 	(4, 'Andoyo Cakep', 'javawebmedia@gmail.com', 'javawebmedia', 'dc28d4424ece38803650f440d7eb1cb2b3fb6651', 'Admin', NULL, 'testimonials-1.jpg', '2020-09-21 22:07:43'),
 	(14, 'Eflita Meiyetriani', 'eflita@gmail.com', 'eflita', '4228f9df60d56e866971c15271382b9f10251ce0', 'Admin', NULL, 'course-8-1599013102.jpg', '2020-09-02 02:18:22'),
 	(15, 'Rizky User', 'rizki@tcontinent.com', 'rizky', '829b36babd21be519fa5f9353daf5dbdb796993e', 'User', NULL, 'robusta-1741667887.png', '2025-03-11 04:38:07');
 
--- Dumping structure for table compro.video
+-- Dumping structure for table jemari_edu.video
 CREATE TABLE IF NOT EXISTS `video` (
   `id_video` int NOT NULL AUTO_INCREMENT,
   `judul` varchar(200) NOT NULL,
@@ -428,7 +428,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   PRIMARY KEY (`id_video`)
 ) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
 
--- Dumping data for table compro.video: ~1 rows (approximately)
+-- Dumping data for table jemari_edu.video: ~1 rows (approximately)
 INSERT INTO `video` (`id_video`, `judul`, `posisi`, `keterangan`, `video`, `urutan`, `bahasa`, `gambar`, `id_user`, `tanggal`) VALUES
 	(66, 'Sesi 2a Penggunaan Mendeley (Praktek dan Langkah-langkah Pengerjaannya)', 'Homepage', 'Sesi 2a Penggunaan Mendeley (Praktek dan Langkah-langkah Pengerjaannya)', 'vsb93FnDim0', 1, 'Indonesia', 'post-fb-2-1600728513.png', 4, '2020-09-21 22:48:33');
 
