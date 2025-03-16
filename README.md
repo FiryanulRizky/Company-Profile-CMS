@@ -1,10 +1,10 @@
-# COMPANY PROFILE JEMARI EDU - LARAVEL 11
- Website Company Profile dengan Laravel 11. 
- CMS ini dikembangkan oleh Jemari Edu (http://blog.jemari-edu.web.id).
+# COMPANY PROFILE JEMARI EDU - LARAVEL 12
+ Website Company Profile dengan Laravel 12. 
+ CMS ini dikembangkan oleh Jemari Edu (http://jemari-edu.web.id).
  
  # Server Requirements
  Server Anda harus memenuhi kriteria ini:
-- PHP >= 8.2
+- PHP >= 8.4.5
 - BCMath PHP Extension
 - Ctype PHP Extension
 - Fileinfo PHP extension
@@ -46,4 +46,4 @@ Selanjutnya lakukan konfigurasi file *.env* Anda sesuai dengan data website dan 
  # Halaman Administrator
  - Buka alamat: http://localhost/jemari-edu/login
  - Username: root
- - Password: JEfiryan290399,.
+ - Password:
