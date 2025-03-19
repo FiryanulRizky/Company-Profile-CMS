@@ -22,7 +22,7 @@ class Download extends Controller
 						'deskripsi'	          => 'Dokumen '.website('namaweb'),
 						'keywords'	           => 'Dokumen '.website('namaweb'),
 						'kategori_download'	  => $kategori_download,
-                        'content'	          => 'download/kategori'
+                        'content'	          => 'project/kategori'
                     );
         return view('layout/wrapper',$data);
     }

@@ -8,7 +8,7 @@
 </div>
 <div class="modal-body">
     
-<form action="{{ asset('admin/kategori_download/edit') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/kategori_project/edit') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_kategori_download" value="{{ $kategori_download->id_kategori_download }}">
 <div class="form-group row">

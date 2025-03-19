@@ -15,7 +15,7 @@ class Kategori_download extends Controller
 
 		$data = array(  'title'             => 'Tambah Project',
 						'kategori_download'	=> $kategori_download,
-                        'content'           => 'admin/kategori_download/index'
+                        'content'           => 'admin/kategori_project/index'
                     );
         return view('admin/layout/wrapper',$data);
     }

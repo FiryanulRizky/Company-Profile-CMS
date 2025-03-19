@@ -145,7 +145,7 @@
                   <hr>
                   <?php echo \Illuminate\Support\Str::limit(strip_tags($kategori_download->keterangan), 100, $end='...') ?>
                   <div class="tuser">
-                     <a href="{{ asset('download/kategori/'.$kategori_download->slug_kategori_download) }}" class="btn btn-success"><i class="fa fa-laptop"></i> Lihat Detail</a>
+                     <a href="{{ asset('project/kategori/'.$kategori_download->slug_kategori_download) }}" class="btn btn-success"><i class="fa fa-laptop"></i> Lihat Detail</a>
                   </div>
                </div>
                <!--testimonials box End--> 

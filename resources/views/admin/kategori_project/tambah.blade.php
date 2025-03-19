@@ -10,7 +10,7 @@
 </div>
 <div class="modal-body">
     
-<form action="{{ url('admin/kategori_download/tambah') }}" method="post" accept-charset="utf-8">
+<form action="{{ url('admin/kategori_project/tambah') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 
 <div class="form-group row">
