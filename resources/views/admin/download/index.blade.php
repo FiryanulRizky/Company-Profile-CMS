@@ -22,7 +22,7 @@
             </div>
         </th>
     <th width="25%">JUDUL</th>
-    <th width="30%">KATEGORI - POSISI</th>
+    <th width="30%">PROJECT - POSISI</th>
     <th width="5%">HITS</th>
     <th width="20%">ACTION</th>
 </tr>

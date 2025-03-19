@@ -12,9 +12,9 @@
 {{ csrf_field() }}
 <input type="hidden" name="id_kategori_download" value="{{ $kategori_download->id_kategori_download }}">
 <div class="form-group row">
-	<label class="col-md-3 text-right">Nama Kategori</label>
+	<label class="col-md-3 text-right">Nama Project</label>
 	<div class="col-md-9">
-		<input type="text" name="nama_kategori_download" class="form-control" placeholder="Nama kategori berita" value="<?php echo $kategori_download->nama_kategori_download ?>" required>
+		<input type="text" name="nama_kategori_download" class="form-control" placeholder="Nama project" value="<?php echo $kategori_download->nama_kategori_download ?>" required>
 	</div>
 </div>
 

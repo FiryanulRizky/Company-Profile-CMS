@@ -6,7 +6,7 @@
 <thead>
 <tr>
     <th width="5%">NO</th>
-    <th width="25%">NAMA KATEGORI</th>
+    <th width="25%">NAMA PROJECT</th>
     <th width="25%">KETERANGAN</th>
     <th width="20%">SLUG</th>
     <th width="10%">NO URUT</th>

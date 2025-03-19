@@ -14,9 +14,9 @@
 {{ csrf_field() }}
 
 <div class="form-group row">
-	<label class="col-md-3 text-right">Nama Kategori</label>
+	<label class="col-md-3 text-right">Nama Project</label>
 	<div class="col-md-9">
-		<input type="text" name="nama_kategori_download" class="form-control" placeholder="Nama kategori berita" value="" required>
+		<input type="text" name="nama_kategori_download" class="form-control" placeholder="Nama project" value="" required>
 		@if ($errors->has('nama_kategori_download'))
 	      	<span class="text-danger">{{ $errors->first('nama_kategori_download') }}</span>
 	    @endif  
@@ -33,7 +33,7 @@
 <div class="row form-group">
 <label class="col-md-3 text-right">Isi/keterangan</label>
 <div class="col-md-9">
-<textarea name="keterangan" id="editorku" class="form-control" id="kontenku" placeholder="Isi download">{{ old('keterangan')  }}</textarea>
+<textarea name="keterangan" class="form-control" id="kontenku" placeholder="Isi project">{{ old('keterangan')  }}</textarea>
 </div>
 </div>
 

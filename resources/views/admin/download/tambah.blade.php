@@ -18,14 +18,14 @@
 <form action="{{ asset('admin/download/tambah_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row form-group">
-<label class="col-md-3 text-right">Nama file/download</label>
+<label class="col-md-3 text-right">Nama file/project</label>
 <div class="col-md-9">
-<input type="text" name="judul_download" class="form-control" placeholder="Judul download" value="{{ old('judul_download') }}">
+<input type="text" name="judul_download" class="form-control" placeholder="Judul project" value="{{ old('judul_download') }}">
 </div>
 </div>
 
 <div class="row form-group">
-<label class="col-md-3 text-right">Jenis/Posisi Download</label>
+<label class="col-md-3 text-right">Jenis/Posisi Project</label>
 <div class="col-md-9">
 <select name="jenis_download" class="form-control">
 	<option value="Download">Download Biasa</option>
@@ -35,7 +35,7 @@
 </div>
 
 <div class="row form-group">
-<label class="col-md-3 text-right">Kategori Download</label>
+<label class="col-md-3 text-right">Daftar Project</label>
 <div class="col-md-9">
 <select name="id_kategori_download" class="form-control">
 
@@ -57,14 +57,14 @@
 <div class="row form-group">
 <label class="col-md-3 text-right">Isi/keterangan</label>
 <div class="col-md-9">
-<textarea name="isi" class="form-control" id="kontenku" placeholder="Isi download">{{ old('isi')  }}</textarea>
+<textarea name="isi" class="form-control" id="editorku" placeholder="Isi download">{{ old('isi')  }}</textarea>
 </div>
 </div>
 
 <div class="row form-group">
-<label class="col-md-3 text-right">Link / website yang terkait dengan Download</label>
+<label class="col-md-3 text-right">Link / website yang terkait dengan Project</label>
 <div class="col-md-9">
-<input type="url" name="website" class="form-control" placeholder="http://website.com" value="{{ old('website') }}">
+<input type="url" name="website" class="form-control" placeholder="http://jemari-edu.web.id" value="{{ old('website') }}">
 </div>
 </div>
 

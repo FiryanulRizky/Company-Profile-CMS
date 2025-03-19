@@ -18,17 +18,17 @@
 {{ csrf_field() }}
 <input type="hidden" name="id_download" value="{{ $download->id_download }}">
 <div class="row form-group">
-	<label class="col-md-3 text-right">Nama file/download</label>
+	<label class="col-md-3 text-right">Nama file/project</label>
 	<div class="col-md-9">
-		<input type="text" name="judul_download" class="form-control" placeholder="Judul download" value="<?php echo $download->judul_download ?>">
+		<input type="text" name="judul_download" class="form-control" placeholder="Judul project" value="<?php echo $download->judul_download ?>">
 	</div>
 </div>
 
 <div class="row form-group">
-	<label class="col-md-3 text-right">Jenis/Posisi Download</label>
+	<label class="col-md-3 text-right">Jenis/Posisi Project</label>
 	<div class="col-md-9">
 		<select name="jenis_download" class="form-control">
-			<option value="Download">Download Biasa</option>
+			<option value="Download">File Project</option>
 			<option value="Panduan" 
 			<?php if($download->jenis_download=="Panduan") { echo "selected"; } ?>
 			>Panduan Penelitian</option>
@@ -37,7 +37,7 @@
 </div>
 
 <div class="row form-group">
-	<label class="col-md-3 text-right">Kategori Download</label>
+	<label class="col-md-3 text-right">Kategori Project</label>
 	<div class="col-md-9">
 		<select name="id_kategori_download" class="form-control">
 			<?php foreach($kategori_download as $kategori_download) { ?>
@@ -59,14 +59,14 @@
 	<div class="row form-group">
 		<label class="col-md-3 text-right">Isi/Keterangan</label>
 		<div class="col-md-9">
-			<textarea name="isi" id="editorku" class="form-control" id="kontenku" placeholder="Isi download"><?php echo $download->isi ?></textarea>
+			<textarea name="isi" id="editorku" class="form-control" id="kontenku" placeholder="Isi project"><?php echo $download->isi ?></textarea>
 		</div>
 	</div>
 
 	<div class="row form-group">
-		<label class="col-md-3 text-right">Link/website terkait Download</label>
+		<label class="col-md-3 text-right">Link/website terkait Project</label>
 		<div class="col-md-9">
-			<input type="url" name="website" class="form-control" placeholder="http://website.com" value="<?php echo $download->website ?>">
+			<input type="url" name="website" class="form-control" placeholder="http://jemari-edu.web.id" value="<?php echo $download->website ?>">
 		</div>
 	</div>
 
