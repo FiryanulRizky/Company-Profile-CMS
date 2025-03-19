@@ -18,7 +18,7 @@ class Download extends Controller
 		$download 			= $mydownload->semua();
 		$kategori_download 	= DB::table('kategori_download')->orderBy('urutan','ASC')->get();
 
-		$data = array(  'title'				=> 'Data Download',
+		$data = array(  'title'				=> 'Data Project',
 						'download'			=> $download,
 						'kategori_download'	=> $kategori_download,
                         'content'			=> 'admin/project/index'
@@ -35,7 +35,7 @@ class Download extends Controller
         $download             = $mydownload->cari($keywords);
         $kategori_download    = DB::table('kategori_download')->orderBy('urutan','ASC')->get();
 
-        $data = array(  'title'             => 'Data Download',
+        $data = array(  'title'             => 'Data Project',
                         'download'            => $download,
                         'kategori_download'   => $kategori_download,
                         'content'           => 'admin/project/index'
@@ -75,7 +75,7 @@ class Download extends Controller
         $download             = $mydownload->status_download($status_download);
         $kategori_download    = DB::table('kategori_download')->orderBy('urutan','ASC')->get();
 
-        $data = array(  'title'             => 'Data Download',
+        $data = array(  'title'             => 'Data Project',
                         'download'            => $download,
                         'kategori_download'   => $kategori_download,
                         'content'           => 'admin/project/index'
@@ -91,7 +91,7 @@ class Download extends Controller
         $download             = $mydownload->all_kategori_download($id_kategori_download);
         $kategori_download    = DB::table('kategori_download')->orderBy('urutan','ASC')->get();
 
-        $data = array(  'title'             => 'Data Download',
+        $data = array(  'title'             => 'Data Project',
                         'download'            => $download,
                         'kategori_download'   => $kategori_download,
                         'content'           => 'admin/project/index'
@@ -105,7 +105,7 @@ class Download extends Controller
         if(Session()->get('username')=="") { return redirect('login')->with(['warning' => 'Mohon maaf, Anda belum login']);}
         $kategori_download    = DB::table('kategori_download')->orderBy('urutan','ASC')->get();
 
-        $data = array(  'title'             => 'Tambah Download',
+        $data = array(  'title'             => 'Tambah Project',
                         'kategori_download'   => $kategori_download,
                         'content'           => 'admin/project/tambah'
                     );
@@ -134,7 +134,7 @@ class Download extends Controller
         $download             = $mydownload->detail($id_download);
         $kategori_download    = DB::table('kategori_download')->orderBy('urutan','ASC')->get();
 
-        $data = array(  'title'             => 'Edit Download',
+        $data = array(  'title'             => 'Edit Project',
                         'download'            => $download,
                         'kategori_download'   => $kategori_download,
                         'content'           => 'admin/project/edit'

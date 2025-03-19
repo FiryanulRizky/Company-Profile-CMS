@@ -47,14 +47,14 @@ Route::get('akreditasi/read/{par1}', 'App\Http\Controllers\Akreditasi@read');
 // Route::get('layanan/{par1}', 'App\Http\Controllers\Akreditasi@layanan');
 Route::get('layanan/{par1}', 'App\Http\Controllers\Berita@layanan');
 Route::get('akreditasi/kategori/{par1}', 'App\Http\Controllers\Akreditasi@kategori');
-// download
-Route::get('download', 'App\Http\Controllers\Download@index');
-Route::get('download/unduh/{par1}', 'App\Http\Controllers\Download@unduh');
-Route::get('download/kategori/{par1}', 'App\Http\Controllers\Download@kategori');
+// project
+Route::get('project', 'App\Http\Controllers\Download@index');
+Route::get('project/unduh/{par1}', 'App\Http\Controllers\Download@unduh');
+Route::get('project/kategori/{par1}', 'App\Http\Controllers\Download@kategori');
 Route::get('dokumen', 'App\Http\Controllers\Download@index');
 Route::get('dokumen/unduh/{par1}', 'App\Http\Controllers\Download@unduh');
 Route::get('dokumen/detail/{par1}/{par2}', 'App\Http\Controllers\Download@detail');
-Route::get('download/detail/{par1}/{par2}', 'App\Http\Controllers\Download@detail');
+Route::get('project/detail/{par1}/{par2}', 'App\Http\Controllers\Download@detail');
 // galeri
 Route::get('galeri', 'App\Http\Controllers\Galeri@index');
 Route::get('galeri/detail/{par1}', 'App\Http\Controllers\Galeri@detail');
@@ -177,9 +177,9 @@ Route::post('admin/kategori_proyek/edit', 'App\Http\Controllers\Admin\Kategori_p
 Route::get('admin/kategori_proyek/delete/{par1}', 'App\Http\Controllers\Admin\Kategori_proyek@delete');
 // kategori_download
 Route::get('admin/kategori_download', 'App\Http\Controllers\Admin\Kategori_download@index');
-Route::post('admin/kategori_download/tambah', 'App\Http\Controllers\Admin\Kategori_download@tambah');
-Route::post('admin/kategori_download/edit', 'App\Http\Controllers\Admin\Kategori_download@edit');
-Route::get('admin/kategori_download/delete/{par1}', 'App\Http\Controllers\Admin\Kategori_download@delete');
+Route::post('admin/kategori_project/tambah', 'App\Http\Controllers\Admin\Kategori_download@tambah');
+Route::post('admin/kategori_project/edit', 'App\Http\Controllers\Admin\Kategori_download@edit');
+Route::get('admin/kategori_project/delete/{par1}', 'App\Http\Controllers\Admin\Kategori_download@delete');
 // kategori_galeri
 Route::get('admin/kategori_galeri', 'App\Http\Controllers\Admin\Kategori_galeri@index');
 Route::post('admin/kategori_galeri/tambah', 'App\Http\Controllers\Admin\Kategori_galeri@tambah');
@@ -264,7 +264,7 @@ Route::post('admin/akreditasi/proses', 'App\Http\Controllers\Admin\Akreditasi@pr
 // download
 Route::get('admin/project', 'App\Http\Controllers\Admin\Download@index');
 Route::get('admin/project/cari', 'App\Http\Controllers\Admin\Download@cari');
-Route::get('admin/project/status_download/{par1}', 'App\Http\Controllers\Admin\Download@status_download');
+Route::get('admin/project/status_project/{par1}', 'App\Http\Controllers\Admin\Download@status_download');
 Route::get('admin/project/kategori/{par1}', 'App\Http\Controllers\Admin\Download@kategori');
 Route::get('admin/project/tambah', 'App\Http\Controllers\Admin\Download@tambah');
 Route::get('admin/project/edit/{par1}', 'App\Http\Controllers\Admin\Download@edit');
