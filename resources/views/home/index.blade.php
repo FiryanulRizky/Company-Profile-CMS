@@ -130,7 +130,7 @@
       <div class="row">
          <div class="col-md-12">
             <div class="section-title-2 text-center">
-               <h2>Download</h2>
+               <h2>Projects</h2>
             </div>
             <div id="testimonials" class="owl-carousel owl-theme">
                <?php 

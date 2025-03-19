@@ -36,7 +36,7 @@ $nav_materi  = $myprofil->nav_materi();
       </li>
       
       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Download <span class="pull-right"><i class="fas fa-caret-down"></i></span></a>
+         <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects <span class="pull-right"><i class="fas fa-caret-down"></i></span></a>
          <ul class="dropdown-menu" >            
             <?php foreach($nav_materi as $nav_materi) { ?>
             <li><a href="{{ asset('download/kategori/'.$nav_materi->slug_kategori_download) }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ Str::words($nav_materi->nama_kategori_download,6) }}</a></li>

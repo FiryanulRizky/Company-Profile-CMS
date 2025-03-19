@@ -1,6 +1,6 @@
 # COMPANY PROFILE JEMARI EDU - LARAVEL 12
  Website Company Profile dengan Laravel 12. 
- CMS ini dikembangkan oleh Jemari Edu (http://jemari-edu.web.id).
+ CMS ini didedikasikan kepada Jemari Edu (http://jemari-edu.web.id).
  
  # Server Requirements
  Server Anda harus memenuhi kriteria ini:
