@@ -1,10 +1,10 @@
-<form action="{{ asset('admin/download/proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin/project/proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <p class="btn-group">
   <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
       <i class="fas fa-trash-alt"></i>
     </button> 
-  <a href="{{ asset('admin/download/tambah') }}" class="btn btn-success ">
+  <a href="{{ asset('admin/project/tambah') }}" class="btn btn-success ">
   <i class="fa fa-plus"></i> Tambah File</a>
   
 </p>
@@ -54,10 +54,10 @@
     <td class="text-center"><?php echo $download->hits ?> Hits</td>
     <td>
       <div class="btn-group">
-        <a href="{{ asset('admin/download/unduh/'.$download->id_download) }}" class="btn btn-success btn-sm" target="_blank"><i class="fa fa-download"></i> Unduh</a>
-        <a href="{{ asset('admin/download/edit/'.$download->id_download) }}" 
+        <a href="{{ asset('admin/project/unduh/'.$download->id_download) }}" class="btn btn-success btn-sm" target="_blank"><i class="fa fa-download"></i> Unduh</a>
+        <a href="{{ asset('admin/project/edit/'.$download->id_download) }}" 
           class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-          <a href="{{ asset('admin/download/delete/'.$download->id_download) }}" class="btn btn-danger btn-sm delete-link"><i class="fa fa-trash"></i></a>
+          <a href="{{ asset('admin/project/delete/'.$download->id_download) }}" class="btn btn-danger btn-sm delete-link"><i class="fa fa-trash"></i></a>
         </div>
     </td>
 </tr>

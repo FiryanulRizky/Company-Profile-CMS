@@ -263,15 +263,15 @@ Route::post('admin/akreditasi/edit_proses', 'App\Http\Controllers\Admin\Akredita
 Route::post('admin/akreditasi/proses', 'App\Http\Controllers\Admin\Akreditasi@proses');
 // download
 Route::get('admin/download', 'App\Http\Controllers\Admin\Download@index');
-Route::get('admin/download/cari', 'App\Http\Controllers\Admin\Download@cari');
-Route::get('admin/download/status_download/{par1}', 'App\Http\Controllers\Admin\Download@status_download');
-Route::get('admin/download/kategori/{par1}', 'App\Http\Controllers\Admin\Download@kategori');
-Route::get('admin/download/tambah', 'App\Http\Controllers\Admin\Download@tambah');
-Route::get('admin/download/edit/{par1}', 'App\Http\Controllers\Admin\Download@edit');
-Route::get('admin/download/unduh/{par1}', 'App\Http\Controllers\Admin\Download@unduh');
-Route::get('admin/download/delete/{par1}', 'App\Http\Controllers\Admin\Download@delete');
-Route::post('admin/download/tambah_proses', 'App\Http\Controllers\Admin\Download@tambah_proses');
-Route::post('admin/download/edit_proses', 'App\Http\Controllers\Admin\Download@edit_proses');
-Route::post('admin/download/proses', 'App\Http\Controllers\Admin\Download@proses');
+Route::get('admin/project/cari', 'App\Http\Controllers\Admin\Download@cari');
+Route::get('admin/project/status_download/{par1}', 'App\Http\Controllers\Admin\Download@status_download');
+Route::get('admin/project/kategori/{par1}', 'App\Http\Controllers\Admin\Download@kategori');
+Route::get('admin/project/tambah', 'App\Http\Controllers\Admin\Download@tambah');
+Route::get('admin/project/edit/{par1}', 'App\Http\Controllers\Admin\Download@edit');
+Route::get('admin/project/unduh/{par1}', 'App\Http\Controllers\Admin\Download@unduh');
+Route::get('admin/project/delete/{par1}', 'App\Http\Controllers\Admin\Download@delete');
+Route::post('admin/project/tambah_proses', 'App\Http\Controllers\Admin\Download@tambah_proses');
+Route::post('admin/project/edit_proses', 'App\Http\Controllers\Admin\Download@edit_proses');
+Route::post('admin/project/proses', 'App\Http\Controllers\Admin\Download@proses');
 
 /* END BACK END*/

@@ -15,7 +15,7 @@
     </div>
 @endif
 
-<form action="{{ asset('admin/download/tambah_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin/project/tambah_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row form-group">
 <label class="col-md-3 text-right">Nama file/project</label>
@@ -28,8 +28,8 @@
 <label class="col-md-3 text-right">Jenis/Posisi Project</label>
 <div class="col-md-9">
 <select name="jenis_download" class="form-control">
-	<option value="Download">Download Biasa</option>
-	<option value="Panduan">Panduan Penelitian</option>}
+	<option value="Download">File Project</option>
+	<option value="Panduan">Panduan Penelitian</option>
 </select>
 </div>
 </div>

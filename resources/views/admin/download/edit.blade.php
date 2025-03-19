@@ -14,7 +14,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ asset('admin/download/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin/project/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_download" value="{{ $download->id_download }}">
 <div class="row form-group">
