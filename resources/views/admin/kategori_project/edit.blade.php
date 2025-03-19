@@ -28,7 +28,7 @@
 <div class="row form-group">
 <label class="col-md-3 text-right">Isi/keterangan</label>
 <div class="col-md-9">
-<textarea name="keterangan" class="form-control" id="kontenku" placeholder="Isi project"><?php echo  $kategori_download->keterangan  ?></textarea>
+<textarea name="keterangan" class="form-control simple" id="kontenku" placeholder="Isi project"><?php echo  $kategori_download->keterangan  ?></textarea>
 </div>
 </div>
 
