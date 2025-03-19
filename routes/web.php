@@ -176,7 +176,7 @@ Route::post('admin/kategori_proyek/tambah', 'App\Http\Controllers\Admin\Kategori
 Route::post('admin/kategori_proyek/edit', 'App\Http\Controllers\Admin\Kategori_proyek@edit');
 Route::get('admin/kategori_proyek/delete/{par1}', 'App\Http\Controllers\Admin\Kategori_proyek@delete');
 // kategori_download
-Route::get('admin/kategori_download', 'App\Http\Controllers\Admin\Kategori_download@index');
+Route::get('admin/kategori_project', 'App\Http\Controllers\Admin\Kategori_download@index');
 Route::post('admin/kategori_project/tambah', 'App\Http\Controllers\Admin\Kategori_download@tambah');
 Route::post('admin/kategori_project/edit', 'App\Http\Controllers\Admin\Kategori_download@edit');
 Route::get('admin/kategori_project/delete/{par1}', 'App\Http\Controllers\Admin\Kategori_download@delete');

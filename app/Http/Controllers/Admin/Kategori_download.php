@@ -35,7 +35,7 @@ class Kategori_download extends Controller
             'urutan'   		        => $request->urutan,
             'keterangan'               => $request->keterangan
         ]);
-        return redirect('admin/kategori_download')->with(['sukses' => 'Data telah ditambah']);
+        return redirect('admin/kategori_project')->with(['sukses' => 'Data telah ditambah']);
     }
 
     // edit
@@ -53,7 +53,7 @@ class Kategori_download extends Controller
             'urutan'                => $request->urutan,
             'keterangan'               => $request->keterangan
         ]);
-        return redirect('admin/kategori_download')->with(['sukses' => 'Data telah diupdate']);
+        return redirect('admin/kategori_project')->with(['sukses' => 'Data telah diupdate']);
     }
 
     // Delete
@@ -61,6 +61,6 @@ class Kategori_download extends Controller
     {
     	if(Session()->get('username')=="") { return redirect('login')->with(['warning' => 'Mohon maaf, Anda belum login']);}
     	DB::table('kategori_download')->where('id_kategori_download',$id_kategori_download)->delete();
-    	return redirect('admin/kategori_download')->with(['sukses' => 'Data telah dihapus']);
+    	return redirect('admin/kategori_project')->with(['sukses' => 'Data telah dihapus']);
     }
 }
