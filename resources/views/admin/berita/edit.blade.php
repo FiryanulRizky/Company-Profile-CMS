@@ -64,7 +64,7 @@
 <div class="row form-group">
   <label class="col-md-3 text-right">Isi berita</label> 
   <div class="col-md-9">
-  <textarea name="isi" class="form-control" id="kontenku" placeholder="Isi berita" placeholder="Isi berita"><?php echo $berita->isi ?></textarea>
+  <textarea name="isi" class="form-control" id="kontenku" placeholder="Isi berita"><?php echo $berita->isi ?></textarea>
   </div>
 </div>
 
