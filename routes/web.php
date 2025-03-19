@@ -262,7 +262,7 @@ Route::post('admin/akreditasi/tambah_proses', 'App\Http\Controllers\Admin\Akredi
 Route::post('admin/akreditasi/edit_proses', 'App\Http\Controllers\Admin\Akreditasi@edit_proses');
 Route::post('admin/akreditasi/proses', 'App\Http\Controllers\Admin\Akreditasi@proses');
 // download
-Route::get('admin/download', 'App\Http\Controllers\Admin\Download@index');
+Route::get('admin/project', 'App\Http\Controllers\Admin\Download@index');
 Route::get('admin/project/cari', 'App\Http\Controllers\Admin\Download@cari');
 Route::get('admin/project/status_download/{par1}', 'App\Http\Controllers\Admin\Download@status_download');
 Route::get('admin/project/kategori/{par1}', 'App\Http\Controllers\Admin\Download@kategori');

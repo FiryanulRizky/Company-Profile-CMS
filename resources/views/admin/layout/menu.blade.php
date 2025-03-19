@@ -93,7 +93,7 @@
               <p>Project &amp; File<i class="fas fa-angle-left right"></i></p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"><a href="{{ asset('admin/download') }}" class="nav-link"><i class="fas fa-newspaper nav-icon"></i><p>Data File</p></a>
+              <li class="nav-item"><a href="{{ asset('admin/project') }}" class="nav-link"><i class="fas fa-newspaper nav-icon"></i><p>Data File</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/project/tambah') }}" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah File</p></a>
               </li>

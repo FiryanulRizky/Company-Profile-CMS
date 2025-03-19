@@ -1,5 +1,5 @@
 <p class="text-right">
-	<a href="{{ asset('admin/download') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin/project') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>

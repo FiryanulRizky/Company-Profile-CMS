@@ -53,7 +53,7 @@ class Download extends Controller
             for($i=0; $i < sizeof($id_downloadnya);$i++) {
                 DB::table('download')->where('id_download',$id_downloadnya[$i])->delete();
             }
-            return redirect('admin/download')->with(['sukses' => 'Data telah dihapus']);
+            return redirect('admin/project')->with(['sukses' => 'Data telah dihapus']);
         // PROSES SETTING DRAFT
         }elseif(isset($_POST['update'])) {
             $id_downloadnya       = $request->id_download;
@@ -63,7 +63,7 @@ class Download extends Controller
                         'id_kategori_download'    => $request->id_kategori_download
                     ]);
             }
-            return redirect('admin/download')->with(['sukses' => 'Data kategori telah diubah']);
+            return redirect('admin/project')->with(['sukses' => 'Data kategori telah diubah']);
         }
     }
 
@@ -167,7 +167,7 @@ class Download extends Controller
             'gambar'                => $input['nama_file'],
             'website'               => $request->website
         ]);
-        return redirect('admin/download')->with(['sukses' => 'Data telah ditambah']);
+        return redirect('admin/project')->with(['sukses' => 'Data telah ditambah']);
     }
 
     // edit
@@ -206,7 +206,7 @@ class Download extends Controller
                 'website'               => $request->website
             ]);
         }
-        return redirect('admin/download')->with(['sukses' => 'Data telah ditambah']);
+        return redirect('admin/project')->with(['sukses' => 'Data telah ditambah']);
     }
 
     // Delete
@@ -214,6 +214,6 @@ class Download extends Controller
     {
         if(Session()->get('username')=="") { return redirect('login')->with(['warning' => 'Mohon maaf, Anda belum login']);}
         DB::table('download')->where('id_download',$id_download)->delete();
-        return redirect('admin/download')->with(['sukses' => 'Data telah dihapus']);
+        return redirect('admin/project')->with(['sukses' => 'Data telah dihapus']);
     }
 }
