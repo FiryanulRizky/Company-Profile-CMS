@@ -57,7 +57,7 @@
 <div class="row form-group">
 <label class="col-md-3 text-right">Isi/keterangan</label>
 <div class="col-md-9">
-<textarea name="isi" class="form-control" id="editorku" placeholder="Isi download">{{ old('isi')  }}</textarea>
+<textarea name="isi" class="form-control" id="kontenku" placeholder="Isi download">{{ old('isi')  }}</textarea>
 </div>
 </div>
 

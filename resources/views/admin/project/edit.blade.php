@@ -59,7 +59,7 @@
 	<div class="row form-group">
 		<label class="col-md-3 text-right">Isi/Keterangan</label>
 		<div class="col-md-9">
-			<textarea name="isi" id="editorku" class="form-control" id="kontenku" placeholder="Isi project"><?php echo $download->isi ?></textarea>
+			<textarea name="isi" class="form-control" id="kontenku" placeholder="Isi project"><?php echo $download->isi ?></textarea>
 		</div>
 	</div>
 
