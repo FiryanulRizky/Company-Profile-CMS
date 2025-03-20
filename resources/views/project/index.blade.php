@@ -25,7 +25,7 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
                           </td>
                           <td class="td-top">
                               {{-- <a href="{{ asset('dokumen/unduh/'.$download->id_download) }}" class="btn btn-info"><i class="fa fa-download"></i> Projects</a> --}}
-                              <a href="{{ asset('assets/unduh/file/'.$download->file) }}" class="btn btn-info"><i class="fa fa-download"></i> Projects</a>
+                              <a href="{{ asset('assets/upload/file/'.$download->file) }}" class="btn btn-info"><i class="fa fa-download"></i> Projects</a>
                           </td>
                       </tr>
                       <?php $i++; } ?>

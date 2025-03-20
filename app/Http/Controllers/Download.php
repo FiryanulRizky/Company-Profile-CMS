@@ -46,7 +46,7 @@ class Download extends Controller
                         'keywords'  => $kategori->nama_kategori_download,
                         'downloads' => $download,
                         'kategori'  => $kategori,
-                        'content'   => 'download/index'
+                        'content'   => 'project/index'
                     );
         return view('layout/wrapper',$data);
     }
