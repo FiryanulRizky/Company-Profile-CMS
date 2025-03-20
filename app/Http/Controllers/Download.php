@@ -18,9 +18,9 @@ class Download extends Controller
                     ->orderBy('kategori_download.urutan','ASC')
                     ->get();
 
-		$data = array(  'title'		             => 'Dokumen '.website('namaweb'),
-						'deskripsi'	          => 'Dokumen '.website('namaweb'),
-						'keywords'	           => 'Dokumen '.website('namaweb'),
+		$data = array(  'title'		             => 'Projects '.website('namaweb'),
+						'deskripsi'	          => 'Projects '.website('namaweb'),
+						'keywords'	           => 'Projects '.website('namaweb'),
 						'kategori_download'	  => $kategori_download,
                         'content'	          => 'project/kategori'
                     );

@@ -41,7 +41,7 @@ $nav_materi  = $myprofil->nav_materi();
             <?php foreach($nav_materi as $nav_materi) { ?>
             <li><a href="{{ asset('project/kategori/'.$nav_materi->slug_kategori_download) }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ Str::words($nav_materi->nama_kategori_download,6) }}</a></li>
             <?php } ?>
-            <li><a href="{{ asset('download') }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Lihat Semua Data</a></li>
+            <li><a href="{{ asset('project') }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Lihat Semua Data</a></li>
          </ul>
       </li>
       <li class="nav-item"> <a class="nav-link" href="{{ asset('video') }}">Video</a> </li>
