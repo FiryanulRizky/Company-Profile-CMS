@@ -21,6 +21,7 @@ $site_config = DB::table('konfigurasi')->first();
 <link href="{{ asset('assets/aws/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/aws/css/prettyPhoto.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/aws/css/all.min.css') }}" rel="stylesheet">
+<script src="{{ asset('assets/aws/js/marked.min.js') }}"></script>
 <?php echo $site_config->metatext ?>
 </head>
 

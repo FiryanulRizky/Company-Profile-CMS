@@ -14,8 +14,13 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-                <?php echo $kategori->keterangan ?>
-                <table>
+               <div id='content'></div>
+                  <script>
+                     var var_php = <?php echo json_encode($kategori->keterangan); ?>;
+                     document.getElementById('content').innerHTML =
+                        marked.parse(var_php);
+                  </script>
+                  <table>
                   <tbody>
                      <?php $i=1; foreach($downloads as $download) { ?>
                       <tr style="border-bottom: solid thin #eee;">
@@ -40,5 +45,9 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
          </div>
       </div>
    </div>
+   <script>
+      let el = document.getElementsByClassName['md'][0];
+      el.innerHTML = marked.parse(el.innerHTML);
+   </script>
 </section>
 <!--Blog End--> 
