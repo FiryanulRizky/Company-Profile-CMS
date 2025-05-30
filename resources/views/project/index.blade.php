@@ -45,9 +45,5 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
          </div>
       </div>
    </div>
-   <script>
-      let el = document.getElementsByClassName['md'][0];
-      el.innerHTML = marked.parse(el.innerHTML);
-   </script>
 </section>
 <!--Blog End--> 
