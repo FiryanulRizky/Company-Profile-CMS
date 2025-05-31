@@ -28,7 +28,8 @@
 <div class="row form-group">
 <label class="col-md-3 text-right">Isi/keterangan</label>
 <div class="col-md-9">
-<textarea name="keterangan" class="form-control simple" id="kontenku" placeholder="Isi project"><?php echo  $kategori_download->keterangan  ?></textarea>
+{{-- <textarea name="keterangan" class="form-control simple" id="kontenku" placeholder="Isi project"><?php echo  $kategori_download->keterangan  ?></textarea> --}}
+<textarea name="keterangan" style="width:100%;height:720px;" placeholder="Isi project Isi project (format MarkDown (.MD))"><?php echo  $kategori_download->keterangan  ?></textarea>
 </div>
 </div>
 
