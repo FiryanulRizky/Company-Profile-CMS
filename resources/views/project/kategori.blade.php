@@ -17,8 +17,9 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
               <?php foreach($kategori_download as $kategori_download) { $id_kategori_download = $kategori_download->id_kategori_download; ?>
                <h2>{{ $kategori_download->nama_kategori_download }}</h2>
                <hr>
-               <?php echo $kategori_download->keterangan ?>
 
+                  <?php echo \Illuminate\Support\Str::limit(strip_tags($kategori_download->keterangan), 100, $end='...') ?>
+                <a href="{{ asset('project/kategori/'.$kategori_download->slug_kategori_download) }}" class="read-post">Baca detail</a>
                <?php 
                     $download = DB::table('download')
                     ->join('kategori_download', 'kategori_download.id_kategori_download', '=', 'download.id_kategori_download','LEFT')
@@ -36,7 +37,7 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
                           </td>
                           <td class="td-top">
                               {{-- <a href="{{ asset('dokumen/unduh/'.$download->id_download) }}" class="btn btn-info"><i class="fa fa-download"></i> Projects</a> --}}
-                              <a href="{{ asset('assets/upload/file/'.$download->file) }}" class="btn btn-info"><i class="fa fa-download"></i> Projects</a>
+                              <a href="{{ asset('assets/upload/file/'.$download->file) }}" class="btn btn-info"><i class="fa fa-download"></i> Unduh File Project</a>
                           </td>
                       </tr>
                       <?php $i++; } ?>

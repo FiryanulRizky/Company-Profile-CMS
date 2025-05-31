@@ -16,7 +16,7 @@ $bg   = DB::table('heading')->where('halaman','Dokumen')->orderBy('id_heading','
             <div class="col-md-12">
                <div id='content'></div>
                   <script>
-                     var var_php = <?php echo json_encode($kategori->keterangan); ?>;
+                     var var_php = <?php echo json_encode(str_replace('<p>','',$kategori->keterangan)); ?>;
                      document.getElementById('content').innerHTML =
                         marked.parse(var_php);
                   </script>
